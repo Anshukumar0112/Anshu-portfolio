@@ -1,0 +1,234 @@
+.about {
+    padding: 5rem 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-title span {
+    color: var(--primary-color);
+}
+
+.about-description {
+    color: var(--secondary-color);
+    line-height: 1.8;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.about-buttons a { 
+    padding: 0.6rem 1.2rem; 
+    border-radius: 9px; 
+    border: none; 
+    font-size: 1rem; 
+    font-weight: 600; 
+    cursor: pointer; 
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease; 
+}
+.about-primary-btn {
+    background: var(--primary-color);
+    color: #000;
+}
+
+.about-primary-btn:hover {
+    box-shadow: 0 8px 18px rgba(56,189,248,0.25);
+}
+.about-secondary-btn {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--primary-color) !important;
+}
+
+.about-secondary-btn:hover {
+    background: rgba(56,189,248,0.08);
+}
+
+.about-description + .about-description {
+    margin-top: 1rem;
+}
+
+.card-heading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+.degree-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.university-name {
+    font-weight: 500;
+}
+.cgpa {
+    margin-top: 1rem;
+    color: var(--secondary-color);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.education-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.8rem 0;
+}
+
+.university-name,
+.education-details span {
+    margin: 0;
+}
+
+.education-details span {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.skill-chip {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.skill-chip:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.15);
+    cursor: default;
+}
+
+/* Internship */
+
+.internship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.job-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.company-details {
+    color: var(--secondary-color);
+    font-size: 0.95rem;
+}
+.internship-header span {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+.internship-description {
+    color: var(--secondary-color);
+    line-height: 1.8;
+}
+.achievement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.achievement-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.03);
+
+    transition: all 0.3s ease;
+}
+.achievement-list li:hover {
+    transform: translateY(-1.5px);
+}
+
+/* Certifications */
+
+.certificate-card {
+    padding: 0.7rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+
+    margin-bottom: 0.7rem;
+
+    transition: all 0.3s ease;
+}
+.certificate-card:hover {
+    transform: translateY(-1.5px);
+}
+.certificate-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.certificate-provider {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+.certificate-card span {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+.view-all-btn {
+    background: transparent;
+    border: none;
+    color: var(--primary-color);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    margin-top: 0.5rem;
+
+    transition: all 0.3s ease;
+}
+.view-all-btn:hover {
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.12);
+}
+
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+     .info-card {
+        padding: 1.5rem;
+    }
+    .internship-header {
+    flex-direction: column;
+    align-items: flex-start;
+}
+}
