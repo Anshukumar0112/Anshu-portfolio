@@ -2,9 +2,9 @@ import React from "react";
 import "./Projects.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 
-import plagiarismImage from "../../assets/projects/plagiarism.png";
-import hospitalImage from "../../assets/projects/hospital.png";
-import signLanguageImage from "../../assets/projects/sign-Language.png";
+import plagiarismImage from "../../assets/projects/plagiarism.webp";
+import hospitalImage from "../../assets/projects/hospital.webp";
+import signLanguageImage from "../../assets/projects/sign-Language.webp";
 
 const projects = [
   {
