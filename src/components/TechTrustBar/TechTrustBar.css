@@ -1,0 +1,103 @@
+.tech-trust-bar {
+    width: 100%;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    background: #0b0c0e;
+    padding: 1.4rem 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.tech-trust-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tech-trust-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary-text);
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    background: #111317;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.tech-trust-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.tech-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.25s ease, transform 0.25s ease;
+    cursor: default;
+}
+
+.tech-trust-icon {
+    font-size: 1.25rem;
+    color: var(--secondary-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .tech-trust-item:hover {
+        color: var(--text-color);
+        transform: translateY(-1px);
+    }
+
+    .tech-trust-item:hover .tech-trust-icon {
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 1024px) {
+    .tech-trust-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .tech-trust-icons {
+        justify-content: flex-start;
+        gap: 1rem 1.4rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .tech-trust-bar {
+        padding: 1.2rem 6%;
+    }
+
+    .tech-trust-item {
+        font-size: 12px;
+    }
+
+    .tech-trust-icon {
+        font-size: 1.15rem;
+    }
+}

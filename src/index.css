@@ -26,7 +26,19 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle Architectural Blueprint Grid Overlay (GPU accelerated) */
+/* Ambient Background Breathing & Drift Animation */
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.75;
+    transform: scale(1) translateZ(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04) translateZ(0);
+  }
+}
+
+/* Subtle Architectural Blueprint Grid Overlay (Animated) */
 body::before {
   content: "";
   position: fixed;
@@ -34,11 +46,13 @@ body::before {
   z-index: 0;
   pointer-events: none;
   transform: translateZ(0);
-  will-change: transform;
+  will-change: transform, opacity;
   background: 
-    radial-gradient(60rem 22rem at 70% 15%, rgba(233, 235, 239, 0.03), transparent 60%),
-    repeating-linear-gradient(90deg, rgba(244, 245, 247, 0.012) 0 1px, transparent 1px 96px),
-    repeating-linear-gradient(0deg, rgba(244, 245, 247, 0.012) 0 1px, transparent 1px 96px);
+    radial-gradient(65rem 24rem at 75% 15%, rgba(233, 235, 239, 0.045), transparent 60%),
+    radial-gradient(45rem 20rem at 20% 85%, rgba(174, 180, 189, 0.035), transparent 60%),
+    repeating-linear-gradient(90deg, rgba(244, 245, 247, 0.014) 0 1px, transparent 1px 96px),
+    repeating-linear-gradient(0deg, rgba(244, 245, 247, 0.014) 0 1px, transparent 1px 96px);
+  animation: ambientPulse 12s ease-in-out infinite;
 }
 
 /* Fine Grain Overlay (Desktop only to prevent mobile scroll lag) */

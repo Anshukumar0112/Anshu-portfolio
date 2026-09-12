@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import InfoCard from "../../components/InfoCard/InfoCard";
+import CertificationsModal from "../../components/CertificationsModal/CertificationsModal";
 import { Link } from "react-router-dom";
+import { FiExternalLink } from "react-icons/fi";
 
 function About() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const skills = [
         "Java",
         "Spring Boot",
@@ -47,14 +51,14 @@ function About() {
                         download="Anshu-Kumar-Resume.pdf"
                         className="primary-btn"
                     >
-                        Download Resume
+                        Download Resume <span className="arrow-icon">→</span>
                     </a>
 
                     <Link
                         to="/contact"
                         className="secondary-btn"
                     >
-                        Contact Me
+                        Contact Me <span className="arrow-icon">→</span>
                     </Link>
 
                 </div>
@@ -145,13 +149,54 @@ function About() {
                 <InfoCard>
 
                     <h2 className="card-heading">
-                        Achievements
+                        Research Publications
                     </h2>
 
-                    <ul className="achievement-list">
-                        <li>IEEE Xplore Research Publication (2025)</li>
-                        <li>Presented Research at ICICC 2026 (Springer)</li>
-                    </ul>
+                    <div className="achievement-container">
+
+                        <div className="achievement-card">
+                            <div className="achievement-header">
+                                <span className="achievement-badge">IEEE Xplore</span>
+                                <span className="achievement-year">2025</span>
+                            </div>
+                            <h3 className="achievement-title">
+                                IEEE Xplore Research Publication
+                            </h3>
+                            <p className="achievement-desc">
+                                Peer-reviewed research paper published and indexed in IEEE Xplore digital library.
+                            </p>
+                            <a
+                                href="https://ieeexplore.ieee.org/document/11430248"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="achievement-link"
+                            >
+                                Read Paper <FiExternalLink />
+                            </a>
+                        </div>
+
+                        <div className="achievement-card">
+                            <div className="achievement-header">
+                                <span className="achievement-badge">Springer · ICICC</span>
+                                <span className="achievement-year">2026</span>
+                            </div>
+                            <h3 className="achievement-title">
+                                ICICC 2026 Research Presentation
+                            </h3>
+                            <p className="achievement-desc">
+                                Research presented and published as a book chapter in Springer proceedings.
+                            </p>
+                            <a
+                                href="https://link.springer.com/chapter/10.1007/978-3-032-30909-9_15"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="achievement-link"
+                            >
+                                Read Chapter <FiExternalLink />
+                            </a>
+                        </div>
+
+                    </div>
 
                 </InfoCard>
 
@@ -203,13 +248,15 @@ function About() {
 
                     </div>
 
-                    <button className="view-all-btn">
-                        View All Certifications →
+                    <button className="view-all-btn" onClick={() => setIsModalOpen(true)}>
+                        View All Certifications <span className="arrow-icon">→</span>
                     </button>
 
                 </InfoCard>
 
             </div>
+
+            <CertificationsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         </section>
     );

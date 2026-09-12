@@ -165,26 +165,89 @@
     color: var(--secondary-color);
     line-height: 1.75;
 }
-.achievement-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.achievement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.achievement-list li {
-    padding: 1rem;
-    margin-bottom: 1rem;
 
+.achievement-card {
+    padding: 1.2rem;
     border: 1px solid var(--hairline);
     border-radius: 10px;
-
     background: #0b0c0e;
-
     transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
-.achievement-list li:hover {
-    border-color: var(--hairline-strong);
-    background-color: #111317;
-    transform: translateY(-1px);
+
+@media (hover: hover) and (pointer: fine) {
+    .achievement-card:hover {
+        border-color: var(--hairline-strong);
+        background-color: #111317;
+        transform: translateY(-2px);
+    }
+}
+
+.achievement-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.achievement-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-color);
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 4px;
+    background: #111317;
+}
+
+.achievement-year {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--tertiary-color);
+}
+
+.achievement-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.achievement-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--secondary-text);
+    margin: 0;
+}
+
+.achievement-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.45rem 0.85rem;
+    border: 1px solid var(--hairline);
+    border-radius: 6px;
+    background: transparent;
+    width: fit-content;
+    margin-top: 0.3rem;
+    transition: all 0.2s ease;
+}
+
+.achievement-link:hover {
+    background: #f4f5f7;
+    color: #0b0c0e;
+    border-color: #f4f5f7;
 }
 
 /* Certifications */
