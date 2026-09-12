@@ -7,10 +7,12 @@ import Contact from "./pages/Contact/Contact";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import SubtleAmbientParticles from "./components/SubtleAmbientParticles/SubtleAmbientParticles";
 
 function App() {
   return (
     <div className="app">
+      <SubtleAmbientParticles />
       <Navbar />
 
       <main className="main-content">

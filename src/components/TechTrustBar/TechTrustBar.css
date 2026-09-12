@@ -1,11 +1,28 @@
 .tech-trust-bar {
-    width: 100%;
-    border-top: 1px solid var(--hairline);
-    border-bottom: 1px solid var(--hairline);
+    position: relative;
+
+    width: calc(100% - 20%);
+    max-width: 1250px;
+
+    margin: 4rem auto 2.5rem;
+
+    padding: 1.5rem 2rem;
+
     background: #0b0c0e;
-    padding: 1.4rem 8%;
-    box-sizing: border-box;
+
+    border: 1px solid var(--hairline);
+    border-radius: 14px;
+
     overflow: hidden;
+
+    box-sizing: border-box;
+    z-index: 5;
+
+    transition: border-color 0.3s ease;
+}
+
+.tech-trust-bar:hover {
+    border-color: var(--hairline-strong);
 }
 
 .tech-trust-container {
@@ -90,7 +107,12 @@
 
 @media (max-width: 768px) {
     .tech-trust-bar {
-        padding: 1.2rem 6%;
+        width: calc(100% - 24px);
+        max-width: 100%;
+        box-sizing: border-box;
+
+        margin: 3rem auto 1.5rem;
+        padding: 1.5rem 1.2rem;
     }
 
     .tech-trust-item {
