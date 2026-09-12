@@ -14,7 +14,7 @@ function Hero() {
           Anshu <span>Kumar</span>
         </h1>
 
-        <h2>Java Full Stack Developer</h2>
+        <h2>Full Stack Developer</h2>
 
         <p className="tech-stack">
           Java • Spring Boot • React • MySQL
