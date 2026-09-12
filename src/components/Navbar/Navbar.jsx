@@ -22,12 +22,15 @@ function Navbar() {
                 <Link to="/contact" onClick={closeMenu}>Contact</Link>
             </div>
 
-            <button
-                className="menu-btn"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-                {isMenuOpen ? <FiX /> : <FiMenu />}
-            </button>
+            <div className="nav-right">
+                <span className="command-badge">⌘K</span>
+                <button
+                    className="menu-btn"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                    {isMenuOpen ? <FiX /> : <FiMenu />}
+                </button>
+            </div>
 
         </nav>
     );

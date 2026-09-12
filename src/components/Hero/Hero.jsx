@@ -10,8 +10,8 @@ function Hero() {
 
         <p className="intro">Hi, I'm </p>
 
-        <h1>
-          Anshu <span>Kumar</span>
+        <h1 className="hero-headline">
+          Anshu <span className="hero-word">Kumar<span className="chrome-echo" aria-hidden="true">Kumar</span></span>
         </h1>
 
         <h2>Full Stack Developer</h2>
@@ -34,7 +34,7 @@ function Hero() {
             download="Anshu-Kumar-Resume.pdf"
             className="primary-btn"
           >
-            Download Resume
+            Download Resume <span className="arrow-icon">→</span>
           </a>
 
           {/* Go to Contact Page */}
@@ -42,7 +42,7 @@ function Hero() {
             to="/contact"
             className="secondary-btn"
           >
-            Contact Me
+            Contact Me <span className="arrow-icon">→</span>
           </Link>
 
         </div>

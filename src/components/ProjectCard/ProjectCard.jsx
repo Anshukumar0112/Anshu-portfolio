@@ -33,7 +33,7 @@ function ProjectCard({ title, description, image, technologies, github, live }) 
                     target="_blank"
                     rel="noreferrer"
                 >
-                    GitHub
+                    GitHub <span className="arrow-icon">→</span>
                 </a>
             )}
 
@@ -43,7 +43,7 @@ function ProjectCard({ title, description, image, technologies, github, live }) 
                     target="_blank"
                     rel="noreferrer"
                 >
-                    Live Demo
+                    Live Demo <span className="arrow-icon">→</span>
                 </a>
             )}
 
