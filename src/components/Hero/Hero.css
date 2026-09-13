@@ -45,6 +45,7 @@
     display: inline-block;
     cursor: default;
     background: linear-gradient(135deg, #ffffff 0%, #aeb4bd 50%, #6e747d 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -58,6 +59,7 @@
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     background: linear-gradient(135deg, #ffffff 0%, #c3c7ce 50%, #8e95a2 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

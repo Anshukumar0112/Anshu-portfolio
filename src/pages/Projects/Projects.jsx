@@ -5,10 +5,21 @@ import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import plagiarismImage from "../../assets/projects/plagiarism.webp";
 import hospitalImage from "../../assets/projects/hospital.webp";
 import signLanguageImage from "../../assets/projects/sign-Language.webp";
+import portfolioImage from "../../assets/projects/portfolio-preview.png";
 
 const projects = [
   {
     id: 1,
+    title: "Personal Developer Portfolio",
+    description:
+      "Modern, responsive developer portfolio engineered with clean component architecture, dark monochrome theme, and ambient visual effects.",
+    image: portfolioImage,
+    technologies: ["React", "JavaScript", "CSS3", "Vite"],
+    github: "https://github.com/Anshukumar0112/Anshu-portfolio.git",
+    live: "https://anshu-portfolio-woad.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Image & Text Based Plagiarism Detector",
     description:
       "AI-powered plagiarism detector using OCR, NLP and semantic similarity.",
@@ -18,7 +29,7 @@ const projects = [
     live: "",
   },
   {
-    id: 2,
+    id: 3,
     title: "Hospital Management System",
     description:
       "A web-based hospital management system for efficient patient and staff management.",
@@ -28,7 +39,7 @@ const projects = [
     live: "",
   },
   {
-    id: 3,
+    id: 4,
     title: "Sign Language Recognition",
     description:
       "A computer vision system that translates hand gestures into text using machine learning.",
@@ -43,12 +54,11 @@ function Projects() {
   return (
     <section className="projects">
       <div className="projects-wrapper">
-
         <h2 className="section-title">Projects</h2>
 
         <p className="section-description">
           A collection of projects that showcase my experience in
-            Backend Development, and Full Stack Web Development.
+          Backend Development, and Full Stack Web Development.
         </p>
 
         <div className="projects-container">
@@ -64,7 +74,6 @@ function Projects() {
             />
           ))}
         </div>
-
       </div>
     </section>
   );
